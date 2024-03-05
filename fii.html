@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Delivery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 10px;
+    line-height: 100px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  #loveButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  #loveButton:hover {
+    transform: scale(1.1);
+  }
+  #loveCounter {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  #loveMessage {
+    font-size: 24px;
+    margin-top: 30px;
+    display: none;
+    color: #ff4081;
+    font-weight: bold;
+  }
+  @media only screen and (max-width: 600px) {
+    #loveButton {
+      padding: 12px 24px;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    #loveCounter {
+      font-size: 24px;
+    }
+    #loveMessage {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<h1>Click Here</h1>
+<button id="loveButton" onclick="increaseCounter()">Click Here</button>
+<p id="loveCounter">0</p>
+<p id="loveMessage">Hi babe .. ! Maybe o see message nv krom button right ! o jox button mdong 1 dal number 4 hov Oun Sml ..</p>
+<script>
+  let clickCount = 0;
+
+  function increaseCounter() {
+    clickCount++;
+    document.getElementById('loveCounter').textContent = clickCount;
+    if (clickCount >= 1) {
+      document.getElementById('loveMessage').style.display = 'block';
+    }
+    if (clickCount >= 2) {
+      document.getElementById('loveMessage').textContent = "O kompung kuy ann message b trov hee.";
+    }
+    if (clickCount >= 3) {
+      document.getElementById('loveMessage').textContent = "Wait b jes tha teh min srul o keng ann pg min dg. tel b jg brab o tha >> ";
+    }
+    if (clickCount >= 4) {
+      document.getElementById('loveMessage').textContent = " < Bong sl Oun >";
+    }
+  }
+</script>
+</body>
+</html>
